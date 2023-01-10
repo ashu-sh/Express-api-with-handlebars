@@ -1,0 +1,23 @@
+<h1 class="text-center mb-3">{{title}}</h1>
+<h1>EXPRESS API</h1>
+<H5>Note - You can make only POST request from here.</H5>
+<form action="/api" method="POST" class="mb-4">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="name" name="name" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="state">State Name</label>
+    <input type="state" name="state" class="form-control">
+  </div>
+  <hr>
+  <input type="submit" value="POST Data" class="btn btn-primary btn-block">
+</form>
+<h4>Data</h4>
+<ul class="list-group">
+  {{#each states}}
+  <li class="list-group-item"><h6>{{this.id}}</h6><h5>City</h5><h6>{{this.name}}</h6><h5>State</h5><h6>{{this.state}}</h6></li>
+  {{/each}}
+</ul>
+
+{{!-- <a href="/api" class="btn btn-light mt-4">Visit API</a> --}}
